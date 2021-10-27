@@ -1,0 +1,13 @@
+{
+  "properties": [
+    {
+      "name": "spring.kafka.producer.group-id",
+      "type": "java.lang.String",
+      "description": "Description for spring.kafka.producer.group-id."
+    },
+    {
+      "name": "spring.kafka.listener.missing-topics-fatal",
+      "type": "java.lang.String",
+      "description": "Description for spring.kafka.listener.missing-topics-fatal."
+    }
+  ] }
