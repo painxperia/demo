@@ -39,7 +39,7 @@ public class KafkaConsumerConfig {
         factory.setConsumerFactory(consumerFactory());
         factory.setMissingTopicsFatal(false);
         factory.getContainerProperties().setAckMode(ContainerProperties.AckMode.MANUAL);
-
+        factory.setBatchListener(true);
         return factory;
     }
 
@@ -53,6 +53,7 @@ public class KafkaConsumerConfig {
         map.put(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, reset);
         map.put(ConsumerConfig.SESSION_TIMEOUT_MS_CONFIG, "12000");
         map.put(ConsumerConfig.REQUEST_TIMEOUT_MS_CONFIG, "18000");
+        map.put(ConsumerConfig.MAX_POLL_RECORDS_CONFIG,10);
         return new DefaultKafkaConsumerFactory<>(map);
     }
 
