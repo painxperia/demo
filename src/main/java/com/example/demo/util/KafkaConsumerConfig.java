@@ -54,6 +54,7 @@ public class KafkaConsumerConfig {
         map.put(ConsumerConfig.SESSION_TIMEOUT_MS_CONFIG, "12000");
         map.put(ConsumerConfig.REQUEST_TIMEOUT_MS_CONFIG, "18000");
         map.put(ConsumerConfig.MAX_POLL_RECORDS_CONFIG,10);
+        map.put(ConsumerConfig.MAX_POLL_INTERVAL_MS_CONFIG,12000);
         return new DefaultKafkaConsumerFactory<>(map);
     }
 
